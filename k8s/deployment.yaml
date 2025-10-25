@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: real-estate-deployment
+spec:
+  replicas: 3  # We'll run 3 pods for high availability
+  selector:
+    matchLabels:
+      app: real-estate-site
+  template:
+    metadata:
+      labels:
+        app: real-estate-site
+    spec:
+      containers:
+      - name: website
+        # IMPORTANT: Change this to your Docker Hub username
+        image: paulimmanuel/real-estate-app:latest 
+        ports:
+        - containerPort: 80
