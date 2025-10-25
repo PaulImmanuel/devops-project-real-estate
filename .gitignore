@@ -1,3 +1,6 @@
 # System files
 .DS_Store
 Thumbs.db
+# Ansible IaC
+provision-aks.yml
+azure_kubeconfig
