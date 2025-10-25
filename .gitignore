@@ -4,3 +4,5 @@ Thumbs.db
 # Ansible IaC
 provision-aks.yml
 azure_kubeconfig
+# Python virtual environment
+venv/
